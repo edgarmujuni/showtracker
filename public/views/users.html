@@ -1,0 +1,29 @@
+<div>
+	<h2 class="text-center">This is the users page!!</h2>
+</div>
+
+
+		<p>Loading Users...</p>
+<table class="table table-bordered table-striped">
+ <thead>
+ <tr>
+ <th>_id</th>
+ <th>Name</th>
+ <th>Username</th>
+ <th class="col-sm-2"></th>
+ </tr>
+ </thead>
+ 
+
+<!-- LOOP OVER THE USERS -->
+ <tr ng-repeat="person in users">
+ <td>{{ person._id }}</td>
+ <td>{{ person.name }}</td>
+
+ <td class="col-sm-2">
+ <a ng-href="/users/{{ person._id }}" class="btn btn-danger">Edit</a>
+ </td>
+  </tr>
+ </table>
+
+
